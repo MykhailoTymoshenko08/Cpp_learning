@@ -1,0 +1,17 @@
+
+
+
+g++ task5.cpp -o task5
+
+
+./task5
+
+
+
+
+
+
+
+
+
+cd ./labs/lab6
