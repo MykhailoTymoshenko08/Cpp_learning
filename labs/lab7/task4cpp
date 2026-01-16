@@ -1,0 +1,25 @@
+// Під час розв’язку задач 4 та 5 потрібно використати явну ініціалізацію елементів матриці.
+// 4. Дана цілочисельна матриця розміру MхN. Для кожного рядка матриці знайти
+// кількість елементів, менших ніж середнє арифметичне елементів цього рядка.
+
+#include <iostream>
+using namespace std;
+#define M 3
+#define N 4
+
+int main(){
+    int A[M][N] = { {2, 4, 6, 8}, {1, 3, 5, 7}, {10, 20, 30, 40} };
+    for (int i = 0; i < M; i++) {
+        float sum = 0;
+        for (int j = 0; j < N; j++) {
+            sum += A[i][j];
+        }
+        float avg = sum / N;
+        int count = 0;
+        for (int j = 0; j < N; j++) { 
+            if (A[i][j] < avg) count++; 
+        }
+        cout << "Row " << i+1 << ": average = " << avg << ", count of elements < avg = " << count << endl;
+    }
+    return 0;
+}
