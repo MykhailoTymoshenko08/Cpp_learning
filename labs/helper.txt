@@ -1,0 +1,17 @@
+
+
+
+g++ task2.cpp -o main
+
+
+./main
+
+
+
+
+
+
+
+
+
+cd ./labs/lab6
